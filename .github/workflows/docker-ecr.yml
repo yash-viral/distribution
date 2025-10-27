@@ -40,6 +40,8 @@ jobs:
         cd client-app
         pip install pyarmor
         python protect_client.py
+        ls -la
+        ls -la dist/ || echo "dist folder not found"
 
     - name: Build, tag, and push image to Amazon ECR
       env:
